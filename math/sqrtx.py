@@ -4,9 +4,9 @@ class Solution:
         m = None
         while l <= r:
             m = l + (r - l)//2
-            if x in range(m**2, (m+1)**2):
+            if x in range(m*m, (m+1)*(m+1)):
                 return m
-            elif m**2 < x:
+            elif m*m < x:
                 l = m + 1
-            elif m**2 > x:
+            elif m*m > x:
                 r = m - 1
