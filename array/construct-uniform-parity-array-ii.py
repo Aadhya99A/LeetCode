@@ -3,4 +3,4 @@ class Solution:
         if 1 in nums1:
             return True
         else:
-            return all([i%2 == 0 for i in nums1])
+            return (all([i%2 == 0 for i in nums1]) or all([i%2 == 1 for i in nums1]))
