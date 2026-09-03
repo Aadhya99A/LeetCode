@@ -1,6 +1,5 @@
 class Solution:
     def uniformArray(self, nums1: list[int]) -> bool:
-        if 1 in nums1:
-            return True
-        else:
-            return (all([i%2 == 0 for i in nums1]) or all([i%2 == 1 for i in nums1]))
+        mn = min(nums1)
+        has_odd = any(x % 2 != 0 for x in nums1)
+        return mn % 2 != 0 or not has_odd
