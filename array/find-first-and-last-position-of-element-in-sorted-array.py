@@ -1,11 +1,9 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        if target not in nums:
-            return [-1,-1]
         lb, l = 0, 0
         rb, r = len(nums) - 1, len(nums) -1
-        first = 0
-        second = 0
+        first = -1
+        second = -1
         while lb <= rb:
             mid_1 = lb + (rb - lb)//2
             print("Loop 1:", mid_1)
